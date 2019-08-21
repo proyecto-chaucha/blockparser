@@ -590,6 +590,11 @@ static int getCoinType() {
         #if defined(UNOBTANIUM)
             130
         #endif
+
+        #if defined(CHAUCHA)
+            88
+        #endif
+
     ;
 }
 
@@ -1023,6 +1028,10 @@ const char *getInterestingAddr() {
     #elif defined(UNOBTANIUM)
 
         "udicetdXSo6Zc7vhWgAZfz4XrwagAX34RK"
+
+    #elif defined(CHAUCHA)
+
+        "cokR7rKb3BT1BhGqiF35iCVFr5uJQ6AZ7Q"
 
     #else
 

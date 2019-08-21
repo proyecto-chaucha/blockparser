@@ -143,6 +143,12 @@ static double getMem() {
     static const uint32_t gExpectedMagic = 0x03b5d503;
 #endif
 
+#if defined CHAUCHA
+    static const size_t gHeaderSize = 80;
+    static auto kCoinDirName = ".chaucha";
+    static const uint32_t gExpectedMagic = 0xa926a2aa;
+#endif
+
 #define DO(x) x
     static inline void   startBlock(const uint8_t *p)                      { DO(gCallback->startBlock(p));         }
     static inline void     endBlock(const uint8_t *p)                      { DO(gCallback->endBlock(p));           }
